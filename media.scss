@@ -1,0 +1,54 @@
+@media (max-width: 1240px) {
+  .container1{
+    width: 90%;
+  }
+  .container2{
+    width: 90%;
+  }
+  .registration-list__items{
+    transform: scale(.8);
+  }
+}
+
+@media(max-width: 1045px){
+  #header__nav{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 992px){
+  .registration-list__items{
+    transform: scale(.7);
+  }
+}
+
+@media(max-width: 776px){
+  .header__nav{
+    display: none;
+  }
+  .registration-list__items{
+    transform: scale(.5);
+  }
+}
+@media(max-width: 660px){
+  .registration-list__items{
+    top: 20px;
+    left: 40px;
+  }
+}
+@media(max-width: 567px){
+
+}
+@media(max-width: 414px){
+
+}
+@media(max-width: 370px){
+
+}
+@media(max-width: 320px){
+
+}
+@media(max-width: 1200px){
+
+}

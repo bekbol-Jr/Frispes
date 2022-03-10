@@ -1,0 +1,51 @@
+%btn{
+  font-family: sans-serif;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  padding: 10px 25px;
+  background: #FF5722;
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.32);
+  transition: .2s;
+
+}
+%btn:hover{
+  background: #1dcb9d;
+  color: #FF5722;
+}
+%btn:active{
+  color: black;
+}
+
+%text-titles{
+  font-family: Lora, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.7em;
+  line-height: 1.2em;
+  color: #10375C;
+}
+%subtitles{
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  color: #222831;
+}
+%descriptions{
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  color: #6A6A6A;
+
+}
+%inputs{
+  margin: 10px 0;
+  background: #0D2C4A;
+  border: none;
+  color: white;
+  padding: 20px 80px;
+  font-size: 1.1em;
+}

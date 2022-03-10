@@ -1,0 +1,643 @@
+@import "reset";
+@import "variables";
+@import "media";
+@import "slick";
+
+//HEADER
+#header {
+  padding-top: 30px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+      font-family: Playfair Display, sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+      color: #10375C;
+    }
+
+    &__nav {
+      &--item {
+        padding: 10px 20px;
+        @extend %subtitles;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 3px;
+          background: #10375C;
+          transition: .3s;
+        }
+
+        &:hover:before {
+          width: 100%;
+        }
+
+        &:hover {
+          color: #0b1f8a;
+        }
+
+      }
+
+    }
+
+    &__btn {
+      &--white {
+        @extend %btn;
+        background: transparent;
+        border: none;
+        font-size: 1.1em;
+        color: #FF5722;
+        margin: 0 10px;
+        box-shadow: none;
+
+        &:hover {
+          background: transparent;
+          color: #1dcb9d;
+        }
+
+        &:active {
+          color: black;
+        }
+      }
+
+      &--orange {
+        @extend %btn;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+//HEADER
+
+//HERO
+#hero {
+  padding-top: 40px;
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__titles {
+      &--subtitle {
+        @extend %subtitles;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: "";
+          width: 70px;
+          height: 2px;
+          background: #222831;
+          left: 100px;
+          top: 10px;
+        }
+      }
+
+      &--theme {
+        width: 35vw;
+        @extend %text-titles;
+        margin: 10px 0;
+
+        &::first-line {
+          color: red;
+        }
+      }
+    }
+
+    &__description {
+      width: 26vw;
+      @extend %descriptions;
+    }
+  }
+}
+
+//HERO
+
+
+//REGISTRATION-LIST
+#registration-list {
+  padding-top: 40px;
+
+  .registration-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    &__items {
+      position: absolute;
+      right: 50%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      background: #10375C;
+      padding: 20px 50px;
+      margin: 0 0 0 30px;
+
+
+      &--title {
+        @extend %text-titles;
+        color: white;
+        font-size: 2em;
+        margin: 30px 0;
+      }
+
+      &--location {
+        @extend %inputs;
+      }
+
+      &--type {
+        @extend %inputs;
+        padding: 20px 104px;
+      }
+
+      &--date {
+        @extend %inputs;
+        padding: 20px 94px;
+      }
+
+      &--btn {
+        @extend %btn;
+        margin: 10px 0;
+        padding: 20px 104px;
+      }
+    }
+
+    &__img {
+      width: 80vw;
+      position: relative;
+    }
+  }
+}
+
+//REGISTRATION-LIST
+
+
+//OUR-SPACES
+#our-spaces {
+  padding-top: 120px;
+
+  .our-spaces__titles {
+    display: flex;
+    align-items: center;
+
+    &--theme {
+      margin: 0 70px 0 0;
+      @extend %text-titles;
+    }
+
+    &--description {
+      width: 28vw;
+      @extend %descriptions;
+      margin: 0 0 0 70px;
+      font-size: 1em;
+    }
+  }
+
+  .our-spaces {
+    padding-top: 20px;
+    position: relative;
+
+    .slick-prev {
+      position: absolute;
+      font-size: 0;
+      border: none;
+      background: url("../img/slick-prev.svg") no-repeat center/60px;
+      width: 60px;
+      height: 20px;
+      top: -25px;
+      right: 170px;
+    }
+
+    .slick-next {
+      position: absolute;
+      font-size: 0;
+      border: none;
+      background: url("../img/slick-next.svg") no-repeat center/120px;
+      width: 120px;
+      height: 20px;
+      top: -25px;
+      right: 30px;
+    }
+
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+
+      .slick-active button {
+        background: #FF5722;
+      }
+
+      li button {
+        font-size: 0;
+        border: none;
+        width: 30px;
+        height: 5px;
+        background: #aba7a7;
+      }
+    }
+
+    &__box1 {
+      position: relative;
+      width: 30vw;
+
+      &__img {
+
+      }
+
+      &--items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+        top: 150px;
+        transition: .2s;
+
+        &__theme {
+          @extend %text-titles;
+          color: white;
+          font-size: 1.5em;
+          margin: 0 0 20px 0;
+        }
+
+        &__description {
+          @extend %descriptions;
+          color: white;
+          width: 80%;
+          text-align: center;
+          font-size: 1em;
+        }
+      }
+
+      &:hover .our-spaces__box1--items {
+        opacity: 1;
+      }
+
+      &__title {
+        padding-top: 20px;
+        @extend %subtitles;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 93%;
+        height: 100%;
+        background: #10375C;
+        opacity: 0;
+        transition: .2s;
+      }
+
+      &:hover:before {
+        opacity: 1;
+      }
+    }
+
+    &__box2 {
+      width: 30vw;
+      position: relative;
+
+      &__img {
+      }
+
+      &--items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+        top: 150px;
+        transition: .2s;
+
+        &__theme {
+          @extend %text-titles;
+          color: white;
+          font-size: 1.5em;
+          margin: 0 0 20px 0;
+        }
+
+        &__description {
+          @extend %descriptions;
+          color: white;
+          width: 80%;
+          text-align: center;
+          font-size: 1em;
+        }
+      }
+
+      &:hover .our-spaces__box2--items {
+        opacity: 1;
+      }
+
+      &__title {
+        padding-top: 20px;
+        @extend %subtitles;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 93%;
+        height: 100%;
+        background: #10375C;
+        opacity: 0;
+        transition: .2s;
+      }
+
+      &:hover:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//OUR-SPACES
+
+
+//ABOUT-COMPANY
+#about-company {
+  padding-top: 100px;
+
+  .about-company {
+    display: flex;
+    justify-content: space-between;
+
+    &__audince {
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      flex-wrap: wrap;
+
+      &__groups {
+        display: flex;
+        align-items: start;
+        padding: 30px 50px;
+
+        &__logo {
+          margin: 0 10px 0 0;
+        }
+
+        &__items {
+          margin: 0 0 0 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+
+          &__numbers {
+            @extend %text-titles;
+            font-size: 2.2em;
+          }
+
+          &__title {
+            @extend %descriptions;
+            font-size: .7em;
+          }
+        }
+      }
+    }
+
+    &__subtitles {
+      width: 80%;
+      height: 120%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      background: #10375C;
+      padding: 40px 40px;
+
+      &__title {
+        @extend %subtitles;
+        position: relative;
+        color: white;
+
+        &:before {
+          position: absolute;
+          content: "";
+          width: 50px;
+          height: 2px;
+          background: #ffffff;
+          left: 110px;
+          top: 10px;
+        }
+      }
+
+      &__theme {
+        @extend %text-titles;
+        font-size: 2.1em;
+        color: white;
+        margin: 15px 0 0 0;
+        width: 70%;
+      }
+
+      &__description {
+        @extend %descriptions;
+        color: white;
+        font-size: .9em;
+        line-height: 1.5;
+        margin: 30px 0 0 0;
+        width: 76%;
+      }
+    }
+  }
+}
+
+//ABOUT-COMPANY
+
+
+//OUR-FACILITIES
+
+#our-facilities {
+  padding-top: 100px;
+
+  .container1 {
+    position: relative;
+  }
+
+  .our-facilities__title {
+    @extend %subtitles;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 70px;
+      height: 2px;
+      background: #222831;
+      left: 110px;
+      top: 10px;
+    }
+  }
+
+  .our-facilities__theme {
+    @extend %text-titles;
+    font-size: 2.7em;
+    width: 56%;
+    padding-top: 20px;
+  }
+
+  .our-facilities {
+    position: absolute;
+    width: 54%;
+    right: 0;
+    padding-top: 50px;
+
+    &__img {
+      width: 600px;
+      height: 380px;
+    }
+
+    .slick-prev, .slick-next {
+      position: absolute;
+      font-size: 0;
+      left: 50px;
+      border: none;
+      z-index: -1;
+    }
+
+    .slick-dots {
+      position: absolute;
+      left: -80%;
+      top: 13%;
+
+      .slick-active button {
+        background: #FF5722;
+      }
+
+      li button {
+        background: #ccc6c6;
+        font-size: 0;
+        padding: 30px 220px;
+        outline: none;
+      }
+    }
+
+  }
+}
+
+//OUR-FACILITIES
+
+
+//FRISPES-GALLERY
+
+#frispes-gallery {
+  padding-top: 500px;
+
+  .frispes-gallery__titles {
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 43%;
+    &__subtitle {
+      @extend %subtitles;
+      position: relative;
+      margin: 0 20px 0 0;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 70px;
+        height: 2px;
+        background: #222831;
+        left: 110px;
+        top: 10px;
+        margin: 0 20px;
+      }
+    }
+
+    &__theme {
+      @extend %text-titles;
+
+    }
+  }
+  .frispes-gallery{
+    padding: 50px 0;
+    .slick-prev {
+      position: absolute;
+      font-size: 0;
+      border: none;
+      background: url("../img/slick-prev.svg") no-repeat center/60px;
+      width: 60px;
+      height: 20px;
+      top: -25px;
+      right: 170px;
+    }
+
+    .slick-next {
+      position: absolute;
+      font-size: 0;
+      border: none;
+      background: url("../img/slick-next.svg") no-repeat center/120px;
+      width: 120px;
+      height: 20px;
+      top: -25px;
+      right: 30px;
+    }
+    .slick-current{
+      transition: .2s;
+      transform: scale(.9);
+
+    }
+  }
+}
+
+//FRISPES-GALLERY
+
+//LOGO
+#logo{
+  padding-top: 60px;
+  .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title{
+      @extend %text-titles;
+      font-size: 2.3em;
+    }
+    &__description{
+      @extend %descriptions;
+      font-size: .9em;
+      margin: 20px 0;
+    }
+    &__nav{
+      display: flex;
+      align-items: center;
+      &__items{
+        margin: 20px 30px;
+        transition: .2s;
+        &:hover{
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+
+//LOGO
+
+
+
+
+
+
+
+
+
+
