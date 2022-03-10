@@ -30,6 +30,10 @@
   .registration-list__items{
     transform: scale(.5);
   }
+  .our-facilities{
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media(max-width: 660px){
   .registration-list__items{

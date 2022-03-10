@@ -113,6 +113,11 @@ ul, ol, li {
   .registration-list__items {
     transform: scale(0.5);
   }
+
+  .our-facilities {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (max-width: 660px) {
   .registration-list__items {
@@ -599,7 +604,7 @@ ul, ol, li {
 #our-facilities .our-facilities .slick-dots li button {
   background: #ccc6c6;
   font-size: 0;
-  padding: 30px 220px;
+  padding: 30px 15vw;
   outline: none;
 }
 

@@ -39,33 +39,26 @@ $(".frispes-gallery") .slick({
     arrows: true,
     responsive: [
         {
-            breakpoint: 1140,
-            settings: {
-                slidesToShow: 3,
-            }
-        },
-        {
-            breakpoint: 920,
+            breakpoint: 1200,
             settings: {
                 slidesToShow: 2,
-                arrows: false,
             }
         },
         {
-            breakpoint: 720,
-            settings: {
-                slidesToShow: 2,
-                centerMode: false,
-                arrows: false,
-            }
-        },
-        {
-            breakpoint: 425,
+            breakpoint: 815,
             settings: {
                 slidesToShow: 1,
-                centerMode: false,
-                arrows: false,
+                centerMode: true,
+                centerPadding: '30px',
+
             }
+        },
+        {
+            breakpoint: 491,
+            settings: {
+                slidesToShow: 1,
+                centerMode: false,}
+
         }
     ]
 })
