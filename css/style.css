@@ -47,7 +47,7 @@ ul, ol, li {
   color: black;
 }
 
-#logo .logo__title, #frispes-gallery .frispes-gallery__titles__theme, #our-facilities .our-facilities__theme, #about-company .about-company__subtitles__theme, #about-company .about-company__audince__groups__items__numbers, #our-spaces .our-spaces__box2--items__theme, #our-spaces .our-spaces__box1--items__theme, #our-spaces .our-spaces__titles--theme, #registration-list .registration-list__items--title, #hero .hero__titles--theme {
+#reviews .reviews__titles__theme, #logo .logo__title, #frispes-gallery .frispes-gallery__titles__theme, #our-facilities .our-facilities__theme, #about-company .about-company__subtitles__theme, #about-company .about-company__audince__groups__items__numbers, #our-spaces .our-spaces__box2--items__theme, #our-spaces .our-spaces__box1--items__theme, #our-spaces .our-spaces__titles--theme, #registration-list .registration-list__items--title, #hero .hero__titles--theme {
   font-family: Lora, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -56,14 +56,14 @@ ul, ol, li {
   color: #10375C;
 }
 
-#frispes-gallery .frispes-gallery__titles__subtitle, #our-facilities .our-facilities__title, #about-company .about-company__subtitles__title, #our-spaces .our-spaces__box2__title, #our-spaces .our-spaces__box1__title, #hero .hero__titles--subtitle, #header .header__nav--item {
+#reviews .reviews__boxes__persons__about__name, #reviews .reviews__titles__subtitle, #frispes-gallery .frispes-gallery__titles__subtitle, #our-facilities .our-facilities__title, #about-company .about-company__subtitles__title, #our-spaces .our-spaces__box2__title, #our-spaces .our-spaces__box1__title, #hero .hero__titles--subtitle, #header .header__nav--item {
   font-family: Lato, sans-serif;
   font-weight: bold;
   font-size: 1em;
   color: #222831;
 }
 
-#logo .logo__description, #about-company .about-company__subtitles__description, #about-company .about-company__audince__groups__items__title, #our-spaces .our-spaces__box2--items__description, #our-spaces .our-spaces__box1--items__description, #our-spaces .our-spaces__titles--description, #hero .hero__description {
+#reviews .reviews__boxes__persons__about__profession, #reviews .reviews__boxes__description, #logo .logo__description, #about-company .about-company__subtitles__description, #about-company .about-company__audince__groups__items__title, #our-spaces .our-spaces__box2--items__description, #our-spaces .our-spaces__box1--items__description, #our-spaces .our-spaces__titles--description, #hero .hero__description {
   font-family: Lato, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -121,8 +121,25 @@ ul, ol, li {
 }
 @media (max-width: 660px) {
   .registration-list__items {
-    top: 20px;
-    left: 40px;
+    transform: translateX(60px) scale(0.5);
+  }
+}
+@media (max-width: 567px) {
+  .about-company {
+    flex-wrap: wrap;
+  }
+
+  .registration-list__items {
+    transform: translate(150px, 100px) scale(0.5);
+  }
+
+  .registration-list__img {
+    display: none;
+  }
+}
+@media (max-width: 414px) {
+  .registration-list__items {
+    transform: translateX(200px) scale(0.4);
   }
 }
 /* Slider */
@@ -344,7 +361,7 @@ ul, ol, li {
 }
 
 #our-spaces {
-  padding-top: 120px;
+  padding-top: 190px;
 }
 #our-spaces .our-spaces__titles {
   display: flex;
@@ -676,15 +693,122 @@ ul, ol, li {
   margin: 20px 0;
 }
 #logo .logo__nav {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 #logo .logo__nav__items {
-  margin: 20px 30px;
+  margin: 20px 20px;
   transition: 0.2s;
 }
 #logo .logo__nav__items:hover {
   transform: scale(1.2);
+}
+
+#reviews {
+  padding-top: 100px;
+}
+#reviews .reviews__titles {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 43%;
+}
+#reviews .reviews__titles__subtitle {
+  position: relative;
+}
+#reviews .reviews__titles__subtitle:before {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 2px;
+  background: #222831;
+  left: 75px;
+  top: 10px;
+}
+#reviews .reviews__titles__theme {
+  padding-top: 10px;
+}
+#reviews .reviews {
+  padding-top: 50px;
+}
+#reviews .reviews__boxes {
+  margin: 0 20px;
+  width: 30%;
+  height: 270px;
+  background: #10375C;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#reviews .reviews__boxes__description {
+  color: white;
+  font-style: inherit;
+  font-size: 0.8em;
+  line-height: 26px;
+}
+#reviews .reviews__boxes__persons {
+  display: flex;
+  align-items: center;
+}
+#reviews .reviews__boxes__persons__img {
+  margin-right: 20px;
+  transition: 0.2s;
+}
+#reviews .reviews__boxes__persons__img:hover {
+  transform: translate(-15px, -10px) scale(1.5);
+}
+#reviews .reviews__boxes__persons__about {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+#reviews .reviews__boxes__persons__about__name {
+  color: white;
+  font-weight: 400;
+}
+#reviews .reviews__boxes__persons__about__profession {
+  color: white;
+  font-size: 0.8em;
+  margin-top: 8px;
+}
+#reviews .reviews .slick-prev {
+  position: absolute;
+  font-size: 0;
+  border: none;
+  background: url("../img/slick-prev.svg") no-repeat center/60px;
+  width: 60px;
+  height: 20px;
+  top: -25px;
+  right: 170px;
+}
+#reviews .reviews .slick-next {
+  position: absolute;
+  font-size: 0;
+  border: none;
+  background: url("../img/slick-next.svg") no-repeat center/120px;
+  width: 120px;
+  height: 20px;
+  top: -25px;
+  right: 30px;
+}
+#reviews .reviews .slick-dots {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+#reviews .reviews .slick-dots .slick-active button {
+  background: #FF5722;
+}
+#reviews .reviews .slick-dots li button {
+  font-size: 0;
+  border: none;
+  width: 30px;
+  height: 5px;
+  background: #aba7a7;
 }
 
 /*# sourceMappingURL=style.css.map */

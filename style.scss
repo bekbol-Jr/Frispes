@@ -187,7 +187,7 @@
 
 //OUR-SPACES
 #our-spaces {
-  padding-top: 120px;
+  padding-top: 190px;
 
   .our-spaces__titles {
     display: flex;
@@ -616,10 +616,13 @@
       margin: 20px 0;
     }
     &__nav{
+      width: 100%;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
       &__items{
-        margin: 20px 30px;
+        margin: 20px 20px;
         transition: .2s;
         &:hover{
           transform: scale(1.2);
@@ -628,11 +631,124 @@
     }
   }
 }
-
-
 //LOGO
 
 
+//REVIEWS
+
+#reviews{
+  padding-top: 100px;
+  .reviews__titles{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 43%;
+    &__subtitle {
+      @extend %subtitles;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: "";
+        width: 70px;
+        height: 2px;
+        background: #222831;
+        left: 75px;
+        top: 10px;
+      }
+    }
+    &__theme{
+      padding-top: 10px;
+      @extend %text-titles;
+    }
+  }
+  .reviews{
+    padding-top: 50px;
+    &__boxes{
+      margin: 0 20px;
+      width: 30%;
+      height: 270px;
+      background: #10375C;
+      padding: 30px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__description{
+        @extend %descriptions;
+        color: white;
+        font-style: inherit;
+        font-size: .8em;
+        line-height: 26px;
+      }
+      &__persons{
+        display: flex;
+        align-items: center;
+        &__img{
+          margin-right: 20px;
+          transition: .2s;
+          &:hover{
+            transform: translate(-15px, -10px) scale(1.5);
+          }
+        }
+        &__about{
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          &__name{
+            @extend %subtitles;
+            color: white;
+            font-weight: 400;
+          }
+          &__profession{
+            @extend %descriptions;
+            color: white;
+            font-size: .8em;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+    .slick-prev {
+      position: absolute;
+      font-size: 0;
+      border: none;
+      background: url("../img/slick-prev.svg") no-repeat center/60px;
+      width: 60px;
+      height: 20px;
+      top: -25px;
+      right: 170px;
+    }
+
+    .slick-next {
+      position: absolute;
+      font-size: 0;
+      border: none;
+      background: url("../img/slick-next.svg") no-repeat center/120px;
+      width: 120px;
+      height: 20px;
+      top: -25px;
+      right: 30px;
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+
+      .slick-active button {
+        background: #FF5722;
+      }
+
+      li button {
+        font-size: 0;
+        border: none;
+        width: 30px;
+        height: 5px;
+        background: #aba7a7;
+      }
+    }
+  }
+}
+
+//REVIEWS
 
 
 

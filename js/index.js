@@ -10,11 +10,19 @@ $(".our-spaces") .slick({
             }
         },
         {
-            breakpoint: 815,
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 2,
+                arrows: false,
+            }
+        },
+        {
+            breakpoint: 800,
             settings: {
                 slidesToShow: 1,
                 centerMode: true,
                 centerPadding: '30px',
+                arrows: false,
 
             }
         },
@@ -22,11 +30,14 @@ $(".our-spaces") .slick({
             breakpoint: 491,
             settings: {
                 slidesToShow: 1,
-                centerMode: false,}
+                centerMode: false,
+                arrows: false,
+            }
 
             }
     ]
 })
+
 
 
 $(".our-facilities") .slick({
@@ -45,11 +56,12 @@ $(".frispes-gallery") .slick({
             }
         },
         {
-            breakpoint: 815,
+            breakpoint: 780,
             settings: {
                 slidesToShow: 1,
                 centerMode: true,
                 centerPadding: '30px',
+                arrows: false,
 
             }
         },
@@ -57,7 +69,42 @@ $(".frispes-gallery") .slick({
             breakpoint: 491,
             settings: {
                 slidesToShow: 1,
-                centerMode: false,}
+                centerMode: false,
+                arrows: false,
+            }
+        }
+    ]
+})
+
+
+$(".reviews") .slick({
+    slidesToShow: 3,
+    arrows: true,
+    dots: true,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 715,
+            settings: {
+                slidesToShow: 1,
+                centerMode: true,
+                centerPadding: '30px',
+                arrows: false,
+
+            }
+        },
+        {
+            breakpoint: 491,
+            settings: {
+                slidesToShow: 1,
+                centerMode: false,
+                arrows: false,
+            }
 
         }
     ]

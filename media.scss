@@ -37,14 +37,25 @@
 }
 @media(max-width: 660px){
   .registration-list__items{
-    top: 20px;
-    left: 40px;
+    transform: translateX(60px) scale(.5);
   }
 }
 @media(max-width: 567px){
+  .about-company{
+    flex-wrap: wrap;
+  }
+  .registration-list__items{
+    transform: translate(150px, 100px) scale(.5);
+  }
+  .registration-list__img{
+    display: none;
+  }
 
 }
 @media(max-width: 414px){
+  .registration-list__items{
+    transform: translateX(200px) scale(.4);
+  }
 
 }
 @media(max-width: 370px){
