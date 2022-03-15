@@ -1,11 +1,10 @@
 %btn{
   font-family: sans-serif;
   border: none;
-  font-size: 1em;
+  font-size: .8em;
   font-weight: bold;
   color: white;
-  padding: 5px 25px;
-  height: 60px;
+  padding: 10px 25px;
   background: #FF5722;
   box-shadow: 0 4px 16px rgba(255, 87, 34, 0.32);
   transition: .2s;
@@ -50,4 +49,9 @@
   color: white;
   padding: 20px 80px;
   font-size: 1.1em;
+}
+%boxes{
+  width: 330px;
+  margin: 15px;
+  background: #FFFFff;
 }

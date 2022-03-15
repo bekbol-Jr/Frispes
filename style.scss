@@ -531,7 +531,6 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    //width: 43%;
 
     &__subtitle {
       @extend %subtitles;
@@ -578,12 +577,6 @@
       height: 20px;
       top: -5px;
       right: 30px;
-    }
-
-    .slick-current {
-      transition: .2s;
-      transform: scale(.9);
-
     }
   }
 }
@@ -868,7 +861,7 @@
       }
       &__group2{
         @extend %boxes;
-        width: 310px;
+        //width: 310px;
         padding: 20px;
         &__title{
           @extend %text-titles;

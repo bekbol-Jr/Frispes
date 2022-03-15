@@ -72,7 +72,7 @@ $(".frispes-gallery") .slick({
                 centerMode: false,
                 arrows: false,
             }
-        }
+        },
     ]
 })
 

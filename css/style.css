@@ -30,20 +30,13 @@ ul, ol, li {
   list-style: none;
 }
 
-#news .news__items__group3, #news .news__items__group2, #news .news__items__group1 {
-  width: 350px;
-  margin: 15px;
-  background: #FFFFff;
-}
-
 #member .member__registration__btn, #registration-list .registration-list__items--btn, #header .header__btn--orange, #header .header__btn--white {
   font-family: sans-serif;
   border: none;
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: bold;
   color: white;
-  padding: 5px 25px;
-  height: 60px;
+  padding: 10px 25px;
   background: #FF5722;
   box-shadow: 0 4px 16px rgba(255, 87, 34, 0.32);
   transition: 0.2s;
@@ -91,6 +84,12 @@ ul, ol, li {
   color: white;
   padding: 20px 80px;
   font-size: 1.1em;
+}
+
+#news .news__items__group3, #news .news__items__group2, #news .news__items__group1 {
+  width: 330px;
+  margin: 15px;
+  background: #FFFFff;
 }
 
 @media (max-width: 1240px) {
@@ -188,6 +187,11 @@ ul, ol, li {
 @media (max-width: 414px) {
   .registration-list__items {
     transform: translate(220px, 100px) scale(0.5);
+  }
+}
+@media (max-width: 370px) {
+  .news__items__group1, .news__items__group3 {
+    transform: scale(0.86);
   }
 }
 /* Slider */
@@ -711,10 +715,6 @@ ul, ol, li {
   top: -5px;
   right: 30px;
 }
-#frispes-gallery .frispes-gallery .slick-current {
-  transition: 0.2s;
-  transform: scale(0.9);
-}
 
 #logo {
   padding-top: 60px;
@@ -937,7 +937,6 @@ ul, ol, li {
   justify-content: center;
 }
 #news .news__items__group2 {
-  width: 310px;
   padding: 20px;
 }
 #news .news__items__group2__title {
