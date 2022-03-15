@@ -4,10 +4,12 @@
   font-size: 1em;
   font-weight: bold;
   color: white;
-  padding: 10px 25px;
+  padding: 5px 25px;
+  height: 60px;
   background: #FF5722;
   box-shadow: 0 4px 16px rgba(255, 87, 34, 0.32);
   transition: .2s;
+  cursor: pointer;
 
 }
 %btn:hover{
@@ -22,21 +24,21 @@
   font-family: Lora, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 2.7em;
+  font-size: calc(16px + 24 * (100vw / 1280));
   line-height: 1.2em;
   color: #10375C;
 }
 %subtitles{
   font-family: Lato, sans-serif;
   font-weight: bold;
-  font-size: 1em;
+  font-size: calc(10px + 6 * (100vw / 1280));
   color: #222831;
 }
 %descriptions{
   font-family: Lato, sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.25em;
+  font-size: calc(10px + 10 * (100vw / 1280));
   line-height: 1.5em;
   color: #6A6A6A;
 

@@ -21,6 +21,9 @@
   .registration-list__items{
     transform: scale(.7);
   }
+  .questions__items{
+    flex-wrap: wrap;
+  }
 }
 
 @media(max-width: 776px){
@@ -34,10 +37,19 @@
     display: flex;
     flex-direction: column;
   }
+  .member__person{
+    transform: scale(.7);
+  }
+  .footer{
+    flex-wrap: wrap;
+  }
 }
 @media(max-width: 660px){
   .registration-list__items{
     transform: translateX(60px) scale(.5);
+  }
+  .hero{
+    flex-wrap: wrap;
   }
 }
 @media(max-width: 567px){
@@ -50,11 +62,26 @@
   .registration-list__img{
     display: none;
   }
+  .header__btn{
+    display: none;
+  }
+  .our-spaces__titles{
+    flex-wrap: wrap;
+  }
+  .member__person{
+    display: none;
+  }
+  .our-facilities .slick-dots{
+    display: none;
+  }
+  .our-facilities{
+    width: 95%;
+  }
 
 }
 @media(max-width: 414px){
   .registration-list__items{
-    transform: translateX(200px) scale(.4);
+    transform: translate(220px, 100px) scale(.5);
   }
 
 }
