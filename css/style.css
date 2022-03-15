@@ -153,7 +153,10 @@ ul, ol, li {
 }
 @media (max-width: 567px) {
   .about-company {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .registration-list__items {
