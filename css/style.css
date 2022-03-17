@@ -959,7 +959,7 @@ ul, ol, li {
   color: #FF5722;
   background: #ffffff;
   transform: rotate(-180deg);
-  box-shadow: -5px -8px 9px rgba(0, 0, 0, 0.45);
+  box-shadow: -5px -8px 8px rgba(0, 0, 0, 0.45);
 }
 
 #news {
