@@ -182,6 +182,10 @@ ul, ol, li {
   .registration-list__items {
     transform: translate(220px, 100px) scale(0.5);
   }
+
+  .our-spaces__box1:before, .our-spaces__box2:before, .our-spaces__box3:before {
+    width: 100% !important;
+  }
 }
 @media (max-width: 370px) {
   .news__items__group1, .news__items__group3 {
@@ -827,12 +831,13 @@ ul, ol, li {
 #reviews .reviews__boxes {
   margin: 0 20px;
   width: 30%;
-  height: 270px;
+  height: 250px;
   background: #10375C;
   padding: 30px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: auto;
 }
 #reviews .reviews__boxes__description {
   color: white;
@@ -941,6 +946,7 @@ ul, ol, li {
   background: #FF5722;
   padding: 15px 27px;
   color: #FFFFff;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #questions .questions__items__boxes:hover {
   background: #FF5722;
@@ -953,6 +959,7 @@ ul, ol, li {
   color: #FF5722;
   background: #ffffff;
   transform: rotate(-180deg);
+  box-shadow: -5px -8px 9px rgba(0, 0, 0, 0.45);
 }
 
 #news {

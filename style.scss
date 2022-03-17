@@ -700,12 +700,13 @@
     &__boxes {
       margin: 0 20px;
       width: 30%;
-      height: 270px;
+      height: 250px;
       background: #10375C;
       padding: 30px 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      overflow: auto;
 
       &__description {
         @extend %descriptions;
@@ -838,6 +839,7 @@
           background: #FF5722;
           padding: 15px 27px;
           color: #FFFFff;
+          box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
         }
 
         &:hover {
@@ -851,6 +853,7 @@
               color: #FF5722;
               background: #ffffff;
               transform: rotate(-180deg);
+              box-shadow: -5px -8px 9px rgba(0, 0, 0, 0.45);
             }
           }
         }

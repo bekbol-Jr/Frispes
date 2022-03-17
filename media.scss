@@ -82,6 +82,9 @@
   .registration-list__items {
     transform: translate(220px, 100px) scale(.5);
   }
+  .our-spaces__box1:before, .our-spaces__box2:before, .our-spaces__box3:before,{
+    width: 100% !important;
+  }
 
 }
 
