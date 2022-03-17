@@ -20,8 +20,9 @@
     }
 
     &__nav {
+      flex-wrap: nowrap;
       &--item {
-        margin: 10px 20px;
+        margin-left: 30px;
         padding-bottom: 5px;
         @extend %subtitles;
         position: relative;
@@ -33,7 +34,7 @@
           left: 0;
           width: 0;
           height: 3px;
-          background: #10375C;
+          background: #0b1f8a;
           transition: .3s;
         }
 
@@ -50,13 +51,14 @@
     }
 
     &__btn {
+      display: flex;
+      flex-wrap: nowrap;
       &--white {
         @extend %btn;
         background: transparent;
         border: none;
-        font-size: 1.1em;
         color: #FF5722;
-        margin: 0 10px;
+        margin-right:10px;
         box-shadow: none;
 
         &:hover {
@@ -71,8 +73,45 @@
 
       &--orange {
         @extend %btn;
-        margin: 0 10px;
+        margin-right: 10px;
       }
+    }
+    &__burger{
+      display: none;
+      position: relative;
+      width: 40px;
+      height: 30px;
+    }
+    .header__burger span{
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      background-color: #10375C;
+      top: 13px;
+    }
+    .header__burger:before,
+    .header__burger:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #10375C;
+      left: 0;
+    }
+    .header__burger:before{
+      top: 0;
+    }
+    .header__burger:after{
+      bottom: 0;
+    }
+    .header__burger .active:before{
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    .header__burger .active:after{
+      transform: rotate(-45deg);
+      bottom: 9px;
     }
   }
 }
@@ -147,7 +186,7 @@
       &--title {
         @extend %text-titles;
         color: white;
-        //font-size: 2em;
+        font-size:  calc(16px + 16 * (100vw / 1280));
         margin: 30px 0;
       }
 
@@ -862,7 +901,7 @@
       &__group2{
         @extend %boxes;
         //width: 310px;
-        padding: 20px;
+        padding: 15px;
         &__title{
           @extend %text-titles;
           margin: 15px 0;

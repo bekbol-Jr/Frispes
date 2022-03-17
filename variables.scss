@@ -1,15 +1,14 @@
 %btn{
   font-family: sans-serif;
   border: none;
-  font-size: .8em;
+  font-size: calc(4px + 12 * (100vw / 1280));
   font-weight: bold;
   color: white;
-  padding: 10px 25px;
+  padding: 5px 13px;
   background: #FF5722;
   box-shadow: 0 4px 16px rgba(255, 87, 34, 0.32);
   transition: .2s;
   cursor: pointer;
-
 }
 %btn:hover{
   background: #1dcb9d;
@@ -51,7 +50,7 @@
   font-size: 1.1em;
 }
 %boxes{
-  width: 330px;
-  margin: 15px;
+  width: 350px;
+  margin: 10px;
   background: #FFFFff;
 }

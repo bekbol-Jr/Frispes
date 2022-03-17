@@ -1,3 +1,128 @@
+@media (max-width: 1240px) {
+  .container1 {
+    width: 90%;
+  }
 
+  .container2 {
+    width: 90%;
+  }
+
+  .registration-list__items {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 992px) {
+  .registration-list__items {
+    transform: scale(0.7);
+  }
+
+  .questions__items {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .registration-list__items {
+    transform: scale(0.5);
+  }
+
+  .our-facilities {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .member__person {
+    transform: scale(0.7);
+  }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 660px) {
+  .registration-list__items {
+    transform: translateX(60px) scale(0.5);
+  }
+
+  .hero {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 567px) {
+  .about-company {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .registration-list__items {
+    transform: translate(150px, 100px) scale(0.5);
+  }
+
+  .registration-list__img {
+    display: none;
+  }
+
+  .header__btn {
+    display: none;
+  }
+
+  .our-spaces__titles {
+    flex-wrap: wrap;
+  }
+
+  .member__person {
+    display: none;
+  }
+
+  .our-facilities .slick-dots {
+    display: none;
+  }
+
+  .our-facilities {
+    width: 95%;
+  }
+}
+@media (max-width: 414px) {
+  .registration-list__items {
+    transform: translate(220px, 100px) scale(0.5);
+  }
+}
+@media (max-width: 370px) {
+  .news__items__group1, .news__items__group3 {
+    transform: scale(0.86);
+  }
+}
+@media (max-width: 880px) {
+  #header .header__burger {
+    display: block;
+  }
+  #header .header__nav {
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    background: #10375C;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #ff2e00;
+    border-bottom: 2px solid #ff2e00;
+    border-bottom-right-radius: 50%;
+  }
+  #header .header__nav a{
+    margin-top: 30px;
+    font-size: calc(19px + 5 * (100vw / 1280));
+    color: #d5cece;
+  }
+  #header .header__burger .active:before{
+    transform: rotate(45deg) !important;
+  }
+  #header .header__burger .active:after{
+    transform: rotate(-45deg)!important;
+  }
+}
 
 /*# sourceMappingURL=media.css.map */

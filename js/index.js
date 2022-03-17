@@ -1,3 +1,11 @@
+$(document).ready(function (){
+    $(".header__burger").click(function (event) {
+        $(".header__burger,.header__nav").toggleClass("active");
+    })
+});
+
+
+
 $(".our-spaces") .slick({
     slidesToShow: 3,
     arrows: true,
